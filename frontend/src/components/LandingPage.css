@@ -1,0 +1,29 @@
+.landing {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.landing p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.landing button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}

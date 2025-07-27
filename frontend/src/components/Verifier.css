@@ -1,0 +1,94 @@
+.verifier {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.verifier.dark {
+  background: #121212;
+  color: white;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.verdict-badge {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.trust-bar {
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.trust-bar > div {
+  height: 100%;
+  background-color: #4caf50;
+}
+
+.result-card {
+  border: 2px solid #ddd;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+
+  .result-card.real .trust-bar {
+  background-color: #4caf50; /* green */
+}
+
+.result-card.fake .trust-bar {
+  background-color: #f44336; /* red */
+}
+
+.result-card.unknown .trust-bar > div {
+  background-color: #ffc107; /* amber/yellow */
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode input,
+body.dark-mode button {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-mode .result-card {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+body.dark-mode a {
+  color: #9ecbff;
+}
+
+body.dark-mode .verdict-badge {
+  color: #fff;
+}
