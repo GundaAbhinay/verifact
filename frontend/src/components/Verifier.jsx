@@ -20,7 +20,7 @@ function Verifier() {
         setLoading(true);
         setVerdict(null);
         try {
-            const res = await axios.post('http://localhost:5000/api/verifier', { news: input });
+            const res = await axios.post('https://verifact-backend-nsm4.onrender.com/api/verifier', { news: input });
             setVerdict(res.data.verdict);
             setReason(res.data.reason);
             setSources(res.data.sources);
