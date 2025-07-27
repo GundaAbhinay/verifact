@@ -2,8 +2,8 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-const TAVILY_API_KEY = process.env.TAVILY_API_KEY;
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
+const tapikey = process.env.TAVILY_API_KEY;
+const gapaikey = process.env.GROQ_API_KEY;
 
 router.post('/', async (req, res) => {
   const { news } = req.body;
@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
   try {
 
     const tavilyRes = await axios.post("https://api.tavily.com/search", {
-      api_key: TAVILY_API_KEY,
+      api_key: tapikey,
       query: news,
       search_depth: "advanced",
       include_answer: false,
@@ -52,7 +52,7 @@ Respond in JSON:
       temperature: 0.4
     }, {
       headers: {
-        Authorization: `Bearer ${GROQ_API_KEY}`,
+        Authorization: `Bearer ${gapaikey}`,
         "Content-Type": "application/json"
       }
     });
